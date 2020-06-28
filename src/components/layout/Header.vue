@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div id="header">
     <v-app-bar app color="primary" dark>
       <div @click="$router.push('/')" class="d-flex align-center">
         <v-img
@@ -23,42 +23,26 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn outlined
+      <v-btn
+        outlined
         @click="$router.push('/about')"
         target="_blank"
         text
-        class="mr-3">
+      >
         <span class="mr-2">About</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
-
-      <v-btn
-        outlined
-        @click="$router.push('/grid')"
-        target="_blank"
-        text>
-        <span class="mr-2">Grid</span>
-      </v-btn>
-
     </v-app-bar>
+  </div>
 
-    <v-content>
-      <router-view></router-view>
-    </v-content>
-  </v-app>
 </template>
 
 <script>
-
 export default {
-  name: "App",
-
-  components: {
-    //HelloWorld
-  },
-
-  data: () => ({
-    //
-  })
-};
+  name: "Header"
+}
 </script>
+
+<style>
+
+</style>
